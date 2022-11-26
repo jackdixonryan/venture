@@ -89,4 +89,69 @@ describe("The World", () => {
     world.globalParameters.remove("test");
     expect(world.globalParameters.get("test")).toBeUndefined();
   });
+
+  test("The world has a locations property.", () => {
+    const world = new World();
+    expect(world.locations).toBeDefined();
+  });
+
+  test("The Locations property has a method, getLocation.", () => {
+    const world = new World();
+    expect(world.locations.get).toBeDefined();
+    expect(world.locations.get).toBeInstanceOf(Function);
+  });
+
+  test("The Locations property has a method, getAllLocations.", () => {
+    const world = new World();
+    expect(world.locations.getAll).toBeDefined();
+    expect(world.locations.getAll).toBeInstanceOf(Function);
+  });
+
+  test("The Locations property has a method, addLocation.", () => {
+    const world = new World();
+    expect(world.locations.add).toBeDefined();
+    expect(world.locations.add).toBeInstanceOf(Function);
+  });
+
+  test("The Locations property has a method, removeLocation.", () => {
+    const world = new World();
+    expect(world.locations.remove).toBeDefined();
+    expect(world.locations.remove).toBeInstanceOf(Function);
+  });
+
+  test("The Locations property has a method, updateLocation.", () => {
+    const world = new World();
+    expect(world.locations.update).toBeDefined();
+    expect(world.locations.update).toBeInstanceOf(Function);
+  });
+
+  test("You can create a location with a name and description.", () => {
+    const world = new World();
+    world.locations.add({ name: "test", description: "test" });
+    expect(world.locations.get({ name: "test" }).name).toBe("test");
+  });
+
+  test("You can also retrieve a location with its ID.", () => {
+    const world = new World();
+    world.locations.add({ name: "test", description: "test" });
+    const location = world.locations.get({ name: "test" });
+    expect(world.locations.get({ id: location.id }).name).toBe("test");
+  });
+
+  test("The locations property has a method, link.", () => {
+    const world = new World();
+    expect(world.locations.link).toBeDefined();
+    expect(world.locations.link).toBeInstanceOf(Function);
+  });
+
+  test("The location's link method links two locations.", () => {
+    const world = new World();
+    world.locations.add({ name: "test1", description: "test" });
+    world.locations.add({ name: "test2", description: "test" });
+    world.locations.link("test1", "test2");
+    const locationOne = world.locations.get({ name: "test1" });
+    const locationTwo = world.locations.get({ name: "test2" });
+    expect(locationOne.adjacentLocations).toEqual([locationTwo.id]);
+    expect(locationTwo.adjacentLocations).toEqual([locationOne.id]);
+  });
 });
