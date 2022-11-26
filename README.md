@@ -25,7 +25,7 @@ Moving even higher in level, how could I track:
 - locations
 - world events 
 Boy, this was getting complicated. But I do have a passion for this kind of rich storytelling. I love telling difficult stories with a lot of complexity. I love playing games where the world feels rich and complete. I love discovering something I reckon no other player has seen. I love the freedom of DND, the intricacy of fiction, and the complex world-building of video games. 
-We need a tool, my friends. How are we supposed to keep tracking these rich worlds? Not all of us can be Matthew Mercer or Brendan Lee Mulligan. Some of us have wee little brains that only hold so much information at a time. What if instead of all that we could just 
+We need a tool, my friends. How are we supposed to keep tracking these rich worlds? Not all of us can be Matthew Mercer or Brendan Lee Mulligan. Some of us have wee little brains that only hold so much information at a time. What if instead of all that we could just...
 ## How
 ```javascript
 const world = new World({ name: "My World" }); 
@@ -46,5 +46,7 @@ CharacterManager.get_character_inventory(id);
      ]
 ```
 Obviously, that looks juicy to me as a programmer. Perhaps less intriguing to the average game master or writer. But if we bundled the above as an SDK and shipped it to a nice frontend tool that could embed anywhere for world management? Now we're talking.
-### Nuts and Bolts 
 In essence, many fictional worlds have complicated relational databases. There are locations, characters, allegiances, secrets, items... I could go on. Management of these things requires a lot of consistency checking from the writer themself, along with a potentially large team of proofers. That's not exactly the easiest job for the human brain, though. If I were to ask you to go out into your town, or city block -- hell, even just inventory the location of all things of significance in your own home - you might be hard-pressed to do it. Our brain is designed to pick out the most important, salient details about our surroundings and our worlds. The complexity, that richness that we all crave in our DND campaigns and fiction books, is therefore quite difficult to achieve. 
+Why shouldn't we just delegate the relational thinking to a dedicated ORM for worldbuilding? 
+## More to Follow 
+There will be more in here. For the moment, it's mostly noodling. Noodling belongs in the wiki. Not the README.
