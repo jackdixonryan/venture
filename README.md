@@ -34,12 +34,17 @@ const { ItemManager, CharacterManager, StoryManager, LocationManager } = world;
 
 LocationManager.list_characters_at_location("freezy docks"); 
   -> { id: "guid", name: "archetypal charon" }
+
 CharacterManager.list_story_roles(1);
   ->  [
         { story_id: "guid", dialogues: [ Dialogue_1, Dialogue_2 ] }  
       ]
+      
 CharacterManager.get_character_inventory(id); 
   -> [
         { item_id: "uuid", name: "weird necklace", true_name: "Vengeance of the Chthonic Gods" }
      ]
 ```
+Obviously, that looks juicy to me as a programmer. Perhaps less intriguing to the average game master or writer. But if we bundled the above as an SDK and shipped it to a nice frontend tool that could embed anywhere for world management? Now we're talking.
+### Nuts and Bolts 
+In essence, many fictional worlds have complicated relational databases. There are locations, characters, allegiances, secrets, items... I could go on. Management of these things requires a lot of consistency checking from the writer themself, along with a potentially large team of proofers. That's not exactly the easiest job for the human brain, though. If I were to ask you to go out into your town, or city block -- hell, even just inventory the location of all things of significance in your own home - you might be hard-pressed to do it. Our brain is designed to pick out the most important, salient details about our surroundings and our worlds. The complexity, that richness that we all crave in our DND campaigns and fiction books, is therefore quite difficult to achieve. 
