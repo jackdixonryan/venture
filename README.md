@@ -18,6 +18,7 @@ Then I thought, I've had these same problems in other places before. How am I, a
 - who the characters are 
 - what they know
 - how they interact
+
 Moving even higher in level, how could I track: 
 - possession of items (inventory) 
 - possible gamepaths
@@ -26,4 +27,19 @@ Moving even higher in level, how could I track:
 Boy, this was getting complicated. But I do have a passion for this kind of rich storytelling. I love telling difficult stories with a lot of complexity. I love playing games where the world feels rich and complete. I love discovering something I reckon no other player has seen. I love the freedom of DND, the intricacy of fiction, and the complex world-building of video games. 
 We need a tool, my friends. How are we supposed to keep tracking these rich worlds? Not all of us can be Matthew Mercer or Brendan Lee Mulligan. Some of us have wee little brains that only hold so much information at a time. What if instead of all that we could just 
 ## How
+```javascript
+const world = new World({ name: "My World" }); 
+const { Managers } = world;
+const { ItemManager, CharacterManager, StoryManager, LocationManager } = world; 
 
+LocationManager.list_characters_at_location("freezy docks"); 
+// -> { id: "guid", name: "archetypal charon" }
+CharacterManager.list_story_roles(1);
+// -> [
+  { story_id: "guid", dialogues: [ Dialogue_1, Dialogue_2 ] }  
+]
+CharacterManager.get_character_inventory(id); 
+// -> [
+  { item_id: "uuid", name: "weird necklace", true_name: "Vengeance of the Chthonic Gods" }
+]
+```
