@@ -33,13 +33,13 @@ const { Managers } = world;
 const { ItemManager, CharacterManager, StoryManager, LocationManager } = world; 
 
 LocationManager.list_characters_at_location("freezy docks"); 
-// -> { id: "guid", name: "archetypal charon" }
+  -> { id: "guid", name: "archetypal charon" }
 CharacterManager.list_story_roles(1);
-// -> [
-  { story_id: "guid", dialogues: [ Dialogue_1, Dialogue_2 ] }  
-]
+  ->  [
+        { story_id: "guid", dialogues: [ Dialogue_1, Dialogue_2 ] }  
+      ]
 CharacterManager.get_character_inventory(id); 
-// -> [
-  { item_id: "uuid", name: "weird necklace", true_name: "Vengeance of the Chthonic Gods" }
-]
+  -> [
+        { item_id: "uuid", name: "weird necklace", true_name: "Vengeance of the Chthonic Gods" }
+     ]
 ```
