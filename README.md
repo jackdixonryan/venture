@@ -9,3 +9,21 @@ Greetings, you browser of GitHub, you. This is the source code for a project cal
 4. Interactive Fiction 
 
 How does Venture facilitate such things? Well, I shall tell you. Shortly. 
+## Why
+I was attempting to dig out an older repository, Deepencrypt, the other day. My initial idea behind Deepencrypt was just to get a little Svelte experience by creating a complex website that held a skilling game a la Runescape. The idea is that a player would interact with a web portal as the game itself, and play as a digital archaeologist. I had some notion of making the project worthwhile by linking it to core concepts for understanding the web, though that never quite materialized. 
+When I dug the repository up, I was immediately sidetracked by the thought that it would be really cool to have NPCs on the website with real stories - and that certain kinds of information, certain data packets, might be more valuable or rarer than others, and you could send NPCs emails or chat messages as a way of interacting... I still really like the idea, I think I'll still do it. But suddenly Deepencrypt took on a different tone, with a different set of development requirements. 
+I would need to track what information players knew or did not know. I would need to use that information to contextualize conversations with NPCs. I would need to manage complicated branching in dialogues that would need to be programmatically extensible. I would not want to write a whole new conditional flow for every single interaction. I would need, in short, an engine running Deepencrypt from below. 
+Then I thought, I've had these same problems in other places before. How am I, as a writer or a gamemaster or a programmer, meant to track: 
+- what the player knows 
+- who the characters are 
+- what they know
+- how they interact
+Moving even higher in level, how could I track: 
+- possession of items (inventory) 
+- possible gamepaths
+- locations
+- world events 
+Boy, this was getting complicated. But I do have a passion for this kind of rich storytelling. I love telling difficult stories with a lot of complexity. I love playing games where the world feels rich and complete. I love discovering something I reckon no other player has seen. I love the freedom of DND, the intricacy of fiction, and the complex world-building of video games. 
+We need a tool, my friends. How are we supposed to keep tracking these rich worlds? Not all of us can be Matthew Mercer or Brendan Lee Mulligan. Some of us have wee little brains that only hold so much information at a time. What if instead of all that we could just 
+## How
+
