@@ -33,4 +33,22 @@ describe("The Coder's Morning", () => {
     expect(world.globalParameters.get("program_complete")).toBeDefined();
     expect(world.globalParameters.get("program_complete").value).toBe(false);
   });
+
+  test("I can add two locations, the kitchen and the office, and I can link them.", () => {
+    expect(world.locations).toBeDefined();
+    world.locations.add({
+      name: "kitchen",
+      description: "You are in the kitchen. There is a coffee maker."
+    });
+    world.locations.add({
+      name: "office",
+      description: "You are in the office. There is a computer."
+    });
+    expect(world.locations.get({ name: "office" })).toBeDefined();
+    expect(world.locations.get({ name: "kitchen" })).toBeDefined();
+
+    world.locations.link("kitchen", "office");
+    expect(world.locations.get({ name: "kitchen" }).adjacentLocations.length).toBe(1);
+    expect(world.locations.get({ name: "office" }).adjacentLocations.length).toBe(1);
+  });
 });
