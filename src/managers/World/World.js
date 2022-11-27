@@ -7,6 +7,7 @@ class World {
     this.description = options.description || "";
     this.globalParameters = new GlobalParameters();
     this.locations = new LocationManager();
+    this.items = new ItemManager();
   }
 
   setDescription(description) {

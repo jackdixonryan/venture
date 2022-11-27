@@ -3,6 +3,7 @@ const crypto = require("crypto");
 class Location {
   constructor(options) {
     this.id = crypto.randomUUID();
+    this.properties = options?.properties;
     this.name = options?.name || "";
     this.description = options?.description || "";
     this.items = [];
